@@ -1,8 +1,17 @@
 <?php
 session_start();
-
+//delete all items in cart
+if (isset($_GET['del_all'])) {
+    session_unset();
+}
 if (isset($_POST['addtocart']) && $_POST['addtocart']) {
     add_to_cart();
+}
+
+// xoa 1 san pham
+if (isset($_GET['del_id'])) {
+    $product_id = $_GET['del_id'];
+    unset($_SESSION['cart'][$product_id]);
 }
 
 

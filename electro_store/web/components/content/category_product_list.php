@@ -70,18 +70,14 @@ $products = pg_fetch_all($sql_products_by_cate_id);
                                                 </del>
                                             </div>
                                             <div class="snipcart-details top_brand_home_details item_add single-item hvr-outline-out">
-                                                <form action="#" method="post">
+                                                <form onsubmit="return false" onclick="cartInsert(<?php echo $valueP['id']; ?>)" method="post">
                                                     <fieldset>
-                                                        <input type="hidden" name="cmd" value="_cart" />
-                                                        <input type="hidden" name="add" value="1" />
-                                                        <input type="hidden" name="business" value=" " />
-                                                        <input type="hidden" name="item_name" value="Sony 80 cm (32 inches)" />
-                                                        <input type="hidden" name="amount" value="320.00" />
-                                                        <input type="hidden" name="discount_amount" value="1.00" />
-                                                        <input type="hidden" name="currency_code" value="USD" />
-                                                        <input type="hidden" name="return" value=" " />
-                                                        <input type="hidden" name="cancel_return" value=" " />
-                                                        <input type="submit" name="submit" value="Thêm vào giỏ" class="button btn" />
+                                                        <input type="hidden" id="prod_id<?php echo $valueP['id']; ?>" name="prod_id" value="<?php echo $valueP['id']; ?>" />
+                                                        <input type="hidden" id="prod_name<?php echo $valueP['id']; ?>" name="prod_name" value="<?php echo $valueP['name']; ?>" />
+                                                        <input type="hidden" id="prod_img<?php echo $valueP['id']; ?>" name="prod_img" value="<?php echo $valueP['image']; ?>" />
+                                                        <input type="hidden" id="prod_quantity<?php echo $valueP['id']; ?>" name="prod_quantity" value="1" />
+                                                        <input type="hidden" id="prod_price<?php echo $valueP['id']; ?>" name="prod_price" value="<?php echo $valueP['price']; ?>" />
+                                                        <input type="submit" id="addtocart<?php echo $valueP['id']; ?>" name="addtocart" value="Thêm vào giỏ" class="button" />
                                                     </fieldset>
                                                 </form>
                                             </div>

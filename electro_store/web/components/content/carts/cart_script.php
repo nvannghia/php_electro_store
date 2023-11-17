@@ -4,6 +4,7 @@
 </script>
 
 <script>
+// add product to cart
 function cartInsert(id) {
     $(document).ready(function() {
         data = {
@@ -15,7 +16,7 @@ function cartInsert(id) {
             prod_price: $("#prod_price" + id).val()
         };
         $.ajax({
-            url: 'components/content/carts/cart2.php',
+            url: 'components/content/carts/cart_process.php',
             type: 'post',
             data: data,
             success: function(response) {
@@ -25,9 +26,35 @@ function cartInsert(id) {
     });
 }
 
+//delete all items in cart
 function delete_cart() {
     $(document).ready(function() {
-        alert("Deleted");
+        $.ajax({
+            url: 'components/content/carts/cart_process.php',
+            type: 'get',
+            data: 'del_all',
+            success: function(response) {
+                $("#cart-wrapper").load(location.href + " #cart-wrapper");
+                alert("Đã xóa giỏ hàng!");
+            }
+        });
+    });
+}
+
+//delete an items specific
+function delete_an_item(product_id) {
+    $(document).ready(function() {
+        $.ajax({
+            url: 'components/content/carts/cart_process.php',
+            type: 'get',
+            data: {
+                'del_id': product_id
+            },
+            success: function(response) {
+                $("#cart-wrapper").load(location.href + " #cart-wrapper");
+                alert("Đã xóa sản phẩm!");
+            }
+        });
     });
 }
 </script>

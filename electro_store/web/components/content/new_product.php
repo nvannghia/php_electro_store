@@ -24,76 +24,66 @@
 
                     foreach ($categories_limit_4 as $cate) :
                     ?>
-                    <!-- first section -->
-                    <div class="product-sec1 px-sm-4 px-3 py-sm-5 py-3 mb-4">
-                        <h3 class="heading-tittle text-center font-italic">
-                            <?php echo $cate['name']; ?>
-                        </h3>
-                        <div class="row">
-                            <?php
+                        <!-- first section -->
+                        <div class="product-sec1 px-sm-4 px-3 py-sm-5 py-3 mb-4">
+                            <h3 class="heading-tittle text-center font-italic">
+                                <?php echo $cate['name']; ?>
+                            </h3>
+                            <div class="row">
+                                <?php
                                 foreach ($products_limit_3 as $prod) :
                                     if ($prod['category_id'] == $cate['id']) :
                                 ?>
-                            <div class="col-md-4 product-men mt-5">
-                                <div class="men-pro-item simpleCart_shelfItem">
-                                    <div class="men-thumb-item text-center">
-                                        <img src="images/<?php echo $prod['image']; ?>" alt="" width="200px"
-                                            height="200px" />
-                                        <div class="men-cart-pro">
-                                            <div class="inner-men-cart-pro">
-                                                <a href="?manage=product_detail&product_id=<?php echo $prod['id']; ?>"
-                                                    class="link-product-add-cart">
-                                                    Xem sản phẩm
-                                                </a>
+                                        <div class="col-md-4 product-men mt-5">
+                                            <div class="men-pro-item simpleCart_shelfItem">
+                                                <div class="men-thumb-item text-center">
+                                                    <img src="images/<?php echo $prod['image']; ?>" alt="" width="200px" height="200px" />
+                                                    <div class="men-cart-pro">
+                                                        <div class="inner-men-cart-pro">
+                                                            <a href="?manage=product_detail&product_id=<?php echo $prod['id']; ?>" class="link-product-add-cart">
+                                                                Xem sản phẩm
+                                                            </a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="item-info-product text-center border-top mt-4">
+                                                    <h4 class="pt-1">
+                                                        <a href="?manage=product_detail&prod_id=<?php echo $prod['id']; ?>">
+                                                            <?php echo $prod['name']; ?>
+                                                        </a>
+                                                    </h4>
+                                                    <div class="info-product-price my-2">
+                                                        <span class="item_price">
+                                                            <?php echo number_format($prod['promotion_price']); ?>
+                                                            <i class="fa-solid fa-dong-sign"></i>
+                                                        </span>
+                                                        <del>
+                                                            <?php echo number_format($prod['price']); ?>
+                                                            <i class="fa-solid fa-dong-sign"></i>
+                                                        </del>
+                                                    </div>
+                                                    <div class="snipcart-details top_brand_home_details item_add single-item hvr-outline-out">
+                                                        <form onsubmit="return false" onclick="cartInsert(<?php echo $prod['id']; ?>)" method="post">
+                                                            <fieldset>
+                                                                <input type="hidden" id="prod_id<?php echo $prod['id']; ?>" name="prod_id" value="<?php echo $prod['id']; ?>" />
+                                                                <input type="hidden" id="prod_name<?php echo $prod['id']; ?>" name="prod_name" value="<?php echo $prod['name']; ?>" />
+                                                                <input type="hidden" id="prod_img<?php echo $prod['id']; ?>" name="prod_img" value="<?php echo $prod['image']; ?>" />
+                                                                <input type="hidden" id="prod_quantity<?php echo $prod['id']; ?>" name="prod_quantity" value="1" />
+                                                                <input type="hidden" id="prod_price<?php echo $prod['id']; ?>" name="prod_price" value="<?php echo $prod['price']; ?>" />
+                                                                <input type="submit" id="addtocart<?php echo $prod['id']; ?>" name="addtocart" value="Thêm vào giỏ" class="button" />
+                                                            </fieldset>
+                                                        </form>
+                                                    </div>
+                                                </div>
                                             </div>
                                         </div>
-                                    </div>
-                                    <div class="item-info-product text-center border-top mt-4">
-                                        <h4 class="pt-1">
-                                            <a href="?manage=product_detail&prod_id=<?php echo $prod['id']; ?>">
-                                                <?php echo $prod['name']; ?>
-                                            </a>
-                                        </h4>
-                                        <div class="info-product-price my-2">
-                                            <span class="item_price">
-                                                <?php echo number_format($prod['promotion_price']); ?>
-                                                <i class="fa-solid fa-dong-sign"></i>
-                                            </span>
-                                            <del>
-                                                <?php echo number_format($prod['price']); ?>
-                                                <i class="fa-solid fa-dong-sign"></i>
-                                            </del>
-                                        </div>
-                                        <div
-                                            class="snipcart-details top_brand_home_details item_add single-item hvr-outline-out">
-                                            <form onsubmit="return false"
-                                                onclick="cartInsert('<?php echo $prod['id']; ?>')" method="post">
-                                                <fieldset>
-                                                    <input type="hidden" id="prod_id<?php echo $prod['id']; ?>"
-                                                        name="prod_id" value="<?php echo $prod['id']; ?>" />
-                                                    <input type="hidden" id="prod_name<?php echo $prod['id']; ?>"
-                                                        name="prod_name" value="<?php echo $prod['name']; ?>" />
-                                                    <input type="hidden" id="prod_img<?php echo $prod['id']; ?>"
-                                                        name="prod_img" value="<?php echo $prod['image']; ?>" />
-                                                    <input type="hidden" id="prod_quantity<?php echo $prod['id']; ?>"
-                                                        name="prod_quantity" value="1" />
-                                                    <input type="hidden" id="prod_price<?php echo $prod['id']; ?>"
-                                                        name="prod_price" value="<?php echo $prod['price']; ?>" />
-                                                    <input type="submit" id="addtocart<?php echo $prod['id']; ?>"
-                                                        name="addtocart" value="Thêm vào giỏ" class="button" />
-                                                </fieldset>
-                                            </form>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <?php
+                                <?php
                                     endif;
                                 endforeach;
                                 ?>
+                            </div>
                         </div>
-                    </div>
-                    <!-- //first section -->
+                        <!-- //first section -->
                     <?php endforeach; ?>
                 </div>
             </div>

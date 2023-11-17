@@ -1,6 +1,7 @@
 <?php
-include_once('db/connect.php');
 session_start();
+include_once('db/connect.php');
+
 $conn = connect_db();
 if ($conn == null)
     die();
@@ -68,7 +69,7 @@ if ($conn == null)
             include_once('components/content/product_detail.php');
             break;
         case 'cart':
-            include_once('components/content/cart.php');
+            include_once('components/content/carts/cart_view.php');
             break;
     }
     ?>
@@ -77,7 +78,7 @@ if ($conn == null)
 
 
     <!-- cart process -->
-    <?php require 'components/content/carts/script.php'; ?>
+    <?php require 'components/content/carts/cart_script.php'; ?>
 
     <!-- js-files -->
     <!-- jquery -->
