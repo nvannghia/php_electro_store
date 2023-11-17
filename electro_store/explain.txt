@@ -1,0 +1,7 @@
+content: 
++ category_product_list.php : trang lấy danh sách sản phẩm theo danh mục
++ new_product.php : trang lấy limit 4 danh mục mới nhất và 3 sản phẩm mới nhất cho mỗi danh mục
++ sidebar.php : thanh sidebar bên phải
++ middle_section.html
++ top_product.php : import category_product_list hoặc new_product (tùy điều kiện),  sidebar.php, middle_section.html
+

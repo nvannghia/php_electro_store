@@ -1,0 +1,5 @@
+CÁC TASK KHI LÀM ELECTRO STORE
+1.Phần danh mục sẽ làm đệ quy(2 CẤP) theo kiểu:
+ + PHÂN LOẠI 
+	+ THIẾT BỊ ĐIỆN TỬ: MÁY TÍNH, ĐIỆN THOẠI
+	+ ĐỒ GIA DỤNG ĐIỆN TỬ: BẾP ĐIỆN, MÁY LẠNH, MÁY GIẶC....
