@@ -3,3 +3,9 @@ CÁC TASK KHI LÀM ELECTRO STORE
  + PHÂN LOẠI 
 	+ THIẾT BỊ ĐIỆN TỬ: MÁY TÍNH, ĐIỆN THOẠI
 	+ ĐỒ GIA DỤNG ĐIỆN TỬ: BẾP ĐIỆN, MÁY LẠNH, MÁY GIẶC....
+
+
+
+//các task tiếp theo
++ làm login sau đó validate login đặt hàng, làm csdl để đặt hàng, ghi lại các hóa đơn.
++ nếu được suy nghĩ thêm xem nếu kh login thì lưu dữ liệu thế nào?

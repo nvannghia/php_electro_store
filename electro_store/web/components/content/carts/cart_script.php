@@ -57,4 +57,33 @@ function delete_an_item(product_id) {
         });
     });
 }
+
+// update cart
+
+function update_cart() {
+    var prod_id_arr = $("input[name='prod_id[]']")
+        .map(function() {
+            return $(this).val();
+        }).get();
+    var quantity_arr = $("input[name='quantity[]']")
+        .map(function() {
+            return $(this).val();
+        }).get();
+    console.log(quantity_arr);
+    $(document).ready(function() {
+        $.ajax({
+            url: 'components/content/carts/cart_process.php',
+            type: 'get',
+            data: {
+                'action': 'update',
+                'prod_id': prod_id_arr,
+                'quantity': quantity_arr
+            },
+            success: function(response) {
+                // alert(response);
+                $("#cart-wrapper").load(location.href + " #cart-wrapper");
+            }
+        });
+    });
+}
 </script>

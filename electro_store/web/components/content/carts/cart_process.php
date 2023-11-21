@@ -1,19 +1,29 @@
 <?php
 session_start();
-//delete all items in cart
+// delete all items in cart
 if (isset($_GET['del_all'])) {
     session_unset();
 }
+
+//add to cart
 if (isset($_POST['addtocart']) && $_POST['addtocart']) {
     add_to_cart();
 }
 
-// xoa 1 san pham
+// delete an item in cart
 if (isset($_GET['del_id'])) {
     $product_id = $_GET['del_id'];
     unset($_SESSION['cart'][$product_id]);
 }
 
+// update cart
+if (isset($_GET['action']) && $_GET['action'] == 'update') {
+    $prod_id_arr = $_GET['prod_id'] ?? ''; // an array id of product 
+    $quantity_arr = $_GET['quantity'] ?? ''; // an array quantity of per product 
+    for ($i = 0; $i < count($prod_id_arr); $i++) {
+        $_SESSION['cart'][$prod_id_arr[$i]][2] = $quantity_arr[$i];
+    }
+}
 
 function add_to_cart()
 {
