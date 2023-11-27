@@ -8,4 +8,9 @@ CÁC TASK KHI LÀM ELECTRO STORE
 
 //các task tiếp theo
 + làm login sau đó validate login đặt hàng, làm csdl để đặt hàng, ghi lại các hóa đơn.
++ thanh toán vnpay or các method khác tương đương
++ Chỉ làm 2 role là admin và customer (để trường role luôn ở bảng user)
 + nếu được suy nghĩ thêm xem nếu kh login thì lưu dữ liệu thế nào?
+
++ launch cloudinary
++ đã cài packagist curl -sS https://getcomposer.org/installer | php đã cài!!!

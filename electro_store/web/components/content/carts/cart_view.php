@@ -1,3 +1,8 @@
+<?php
+$user_id = $_SESSION['user']['id'] ?? '';
+$cart_user_id = 'cart' . $user_id;
+?>
+
 <div id="cart-wrapper">
     <div class="services-breadcrumb">
         <div class="agile_inner_breadcrumb">
@@ -12,7 +17,7 @@
             </div>
         </div>
     </div>
-    <?php if (isset($_SESSION['cart']) && count($_SESSION['cart']) > 0) : ?>
+    <?php if (isset($_SESSION[$cart_user_id]) && count($_SESSION[$cart_user_id]) > 0) : ?>
     <div class="privacy py-sm-5 py-4">
         <div class="container py-xl-4 py-lg-2">
             <!-- tittle heading -->
@@ -22,7 +27,7 @@
             <!-- //tittle heading -->
             <div class="checkout-right">
                 <h4 class="mb-sm-4 mb-3">Giỏ hàng đang có:
-                    <span><?php echo count($_SESSION['cart']); ?> sản phẩm</span>
+                    <span><?php echo count($_SESSION[$cart_user_id]); ?> sản phẩm</span>
                 </h4>
                 <div class="table-responsive">
                     <form onsubmit="update_cart(); return false;" method="get">
@@ -43,7 +48,7 @@
                                 <?php
                                     $i = 0;
                                     $sum = 0;
-                                    foreach ($_SESSION['cart'] as $product_key => $product_value) :
+                                    foreach ($_SESSION[$cart_user_id] as $product_key => $product_value) :
                                         $sum += $product_value[2] * (float)$product_value['3'];
                                     ?>
                                 <tr class="rem1">

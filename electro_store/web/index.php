@@ -1,7 +1,6 @@
 <?php
 session_start();
 include_once('db/connect.php');
-
 $conn = connect_db();
 if ($conn == null)
     die();
@@ -52,7 +51,7 @@ if ($conn == null)
 <body>
 
 
-    <?php include_once('components/header/header_top.html') ?>
+    <?php include_once('components/header/header_top.php') ?>
     <?php include_once('components/header/header_bottom.html') ?>
     <?php include_once('components/header/navbar.php')    ?>
     <?php include_once('components/header/slider.html') ?>
