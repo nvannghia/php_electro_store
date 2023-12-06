@@ -1,5 +1,5 @@
 <?php
 echo "<pre>";
-print_r($cates_children);
+print_r($_GET);
 echo "</pre>";
 exit('die');

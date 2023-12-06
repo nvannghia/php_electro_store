@@ -2,7 +2,6 @@
 const alphabet = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z'];
 const k = 10;
 const n = 26;
-
 function ceasar_encode($str)
 {
     $str = strtolower($str);
@@ -11,7 +10,7 @@ function ceasar_encode($str)
     for ($i = 0; $i < $length; $i++) {
         for ($j = 0; $j < n; $j++) {
             if ($str[$i] == alphabet[$j]) {
-                $str .= alphabet[($j + k) % n];
+                $encode_str .= alphabet[($j + k) % n];
                 break;
             }
             if ($j == 25) // khi vòng lặp đã chạy đến cuối cùng

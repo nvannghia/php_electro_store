@@ -5,3 +5,15 @@ content:
 + middle_section.html
 + top_product.php : import category_product_list hoặc new_product (tùy điều kiện),  sidebar.php, middle_section.html
 
+----LOGIC:
++ Thanh toán:
+ 1. Đã đăng nhập: 
+	+Thanh toán MOMO (quét mã kh đc chấp nhận chỉ chuyển khoản)
+	+Thanh toán khi nhận hàng
+	===> Logic là khi thanh toán sẽ chuyển về trang của momo nếu chọn hình thức thanh toán là momo chuyển khoản hoặc qr code momo(kh hoạt động qr code).
+	===> Chuyển về trang hiện tại để xử lý nếu là chọn pttt là thanh toán khi nhận hàng.
+ 2. Chưa đăng nhập: Lưu dữ liệu thông tin đặt hàng vào COOKIE.
+
+
+***************NOTED:
+LÀM XONG NHỚ BACKUP DB MỚI ĐỂ XÓA RDS postgrersql trên AWS.

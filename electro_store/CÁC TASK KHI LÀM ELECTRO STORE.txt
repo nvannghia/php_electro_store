@@ -12,5 +12,10 @@ CÁC TASK KHI LÀM ELECTRO STORE
 + Chỉ làm 2 role là admin và customer (để trường role luôn ở bảng user)
 + nếu được suy nghĩ thêm xem nếu kh login thì lưu dữ liệu thế nào?
 
-+ launch cloudinary
-+ đã cài packagist curl -sS https://getcomposer.org/installer | php đã cài!!!
+
+
+
+
+* các task logic nhiều đã done:
+ 1. Không đăng nhập vẫn cho đặt hàng và lưu dữ liệu đơn hàng trong cookie
+ 2. 

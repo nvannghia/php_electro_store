@@ -69,7 +69,7 @@
                                                                 <input type="hidden" id="prod_name<?php echo $prod['id']; ?>" name="prod_name" value="<?php echo $prod['name']; ?>" />
                                                                 <input type="hidden" id="prod_img<?php echo $prod['id']; ?>" name="prod_img" value="<?php echo $prod['image']; ?>" />
                                                                 <input type="hidden" id="prod_quantity<?php echo $prod['id']; ?>" name="prod_quantity" value="1" />
-                                                                <input type="hidden" id="prod_price<?php echo $prod['id']; ?>" name="prod_price" value="<?php echo $prod['price']; ?>" />
+                                                                <input type="hidden" id="prod_price<?php echo $prod['id']; ?>" name="prod_price" value="<?php echo $prod['promotion_price']; ?>" />
                                                                 <input type="submit" id="addtocart<?php echo $prod['id']; ?>" name="addtocart" value="Thêm vào giỏ" class="button" />
                                                             </fieldset>
                                                         </form>

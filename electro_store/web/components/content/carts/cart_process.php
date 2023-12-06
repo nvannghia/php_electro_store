@@ -1,5 +1,6 @@
 <?php
 session_start();
+
 // multiple session cart for multlple user
 $user_id = $_SESSION['user']['id'] ?? ''; // get user's id logged
 $cart_user_id = 'cart' . $user_id; // create cart with user's id logged. Example: 'cart8' .

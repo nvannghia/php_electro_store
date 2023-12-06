@@ -11,6 +11,11 @@ $conn = connect_db();
 if ($conn == null)
     die("Connection failed!");
 
+// if user logged
+if (!empty($_SESSION['user'])) {
+    header('Location: ../../../index.php');
+}
+
 if (isset($_POST['submit']) && $_POST['submit'] == 'Đăng ký') {
     $email = $_POST['email'] ?? '';
     $pwd = $_POST['pwd'] ?? '';
@@ -104,7 +109,7 @@ if (isset($_POST['submit']) && $_POST['submit'] == 'Đăng nhập') {
                 <form action="<?php echo $_SERVER['PHP_SELF']; ?>" method="post">
                     <input id="email" name="email" type="text" placeholder="Email...">
                     <input id="pwd" name="pwd" type="password" placeholder="Mật khẩu...">
-                    <input type="submit" value="Đăng nhập" name="submit">
+                    <input type="submit" value="Đăng nhập" name="submit" class="btn btn-primary">
                     <a href="">Quên mật khẩu</a>
                 </form>
             </div>
@@ -117,7 +122,7 @@ if (isset($_POST['submit']) && $_POST['submit'] == 'Đăng nhập') {
                     <input id="dp_name" name="dp_name" type="text" placeholder="Nhập tên đại diện">
                     <label for="avatar">Chọn ảnh đại diện</label>
                     <input type="file" name="avt">
-                    <input type="submit" value="Đăng ký" name="submit">
+                    <input type="submit" value="Đăng ký" name="submit" class="btn btn-primary">
                 </form>
             </div>
         </div>
