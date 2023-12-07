@@ -66,6 +66,7 @@ if ($user_id != '') { // if user logged
                         $line = implode(',', $row) . "\n";
                         pg_put_line($conn, $line);
                     }
+
                     // Kết thúc COPY FROM
                     pg_end_copy($conn);
                     pg_query($conn, "COMMIT");
@@ -73,6 +74,7 @@ if ($user_id != '') { // if user logged
                     //xóa session cart và thông tin ship hàng
                     unset($_SESSION[$cart_user_id]);
                     unset($_SESSION['ship_info' . $user_id]);
+
                     // chuyển trang
                     header('Location: ../index.php?manage=cart&payment_success');
                     exit;
@@ -102,7 +104,7 @@ $payment_method = $_POST['payment_method'] ?? '';
 if (!empty($payment_method)) {
     $_SESSION['ship_info' . $user_id] = $_POST ?? ''; // shipping information receive from cart_view.php
     if ($payment_method == 'cash_on_delivery')
-        header('Location: ' . $_SERVER['PHP_SELF']);
+        header('Location: ' . $_SERVER['PHP_SELF']); // redirect to current page ̣(process above).
     else if ($payment_method == 'momo_QRcode')
         require_once('momo/qr.php');
     else

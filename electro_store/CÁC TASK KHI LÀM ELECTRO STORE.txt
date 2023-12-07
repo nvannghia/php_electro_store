@@ -1,21 +1,18 @@
-CÁC TASK KHI LÀM ELECTRO STORE
-1.Phần danh mục sẽ làm đệ quy(2 CẤP) theo kiểu:
- + PHÂN LOẠI 
-	+ THIẾT BỊ ĐIỆN TỬ: MÁY TÍNH, ĐIỆN THOẠI
-	+ ĐỒ GIA DỤNG ĐIỆN TỬ: BẾP ĐIỆN, MÁY LẠNH, MÁY GIẶC....
+CÁC TASK TIẾP THEO KHI TỰ LÀM ELECTRO STORE:
++ Xây dựng phần admin gồm:
+	+ CRUD category
+	+ CRUD product
+	+ QLDH: Xem tất cả các đơn hàng đã đặt(phân loại theo thanh toán)
+	+ Xem thống kê theo ngày, tháng, năm
 
 
-
-//các task tiếp theo
-+ làm login sau đó validate login đặt hàng, làm csdl để đặt hàng, ghi lại các hóa đơn.
-+ thanh toán vnpay or các method khác tương đương
-+ Chỉ làm 2 role là admin và customer (để trường role luôn ở bảng user)
-+ nếu được suy nghĩ thêm xem nếu kh login thì lưu dữ liệu thế nào?
+--> done các task trên quay ra phần customer để code tiếp các chức năng về bộ lọc dữ liệu...
 
 
 
 
 
-* các task logic nhiều đã done:
- 1. Không đăng nhập vẫn cho đặt hàng và lưu dữ liệu đơn hàng trong cookie
- 2. 
+
+
+
+

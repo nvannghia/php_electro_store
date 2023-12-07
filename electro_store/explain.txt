@@ -15,5 +15,14 @@ content:
  2. Chưa đăng nhập: Lưu dữ liệu thông tin đặt hàng vào COOKIE.
 
 
+
++ Danh mục sẽ làm đệ quy(2 CẤP) theo kiểu:
+ - PHÂN LOẠI 
+	+ THIẾT BỊ ĐIỆN TỬ: MÁY TÍNH, ĐIỆN THOẠI
+	+ ĐỒ GIA DỤNG ĐIỆN TỬ: BẾP ĐIỆN, MÁY LẠNH, MÁY GIẶC....
+
+
+
+
 ***************NOTED:
 LÀM XONG NHỚ BACKUP DB MỚI ĐỂ XÓA RDS postgrersql trên AWS.
