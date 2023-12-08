@@ -1,6 +1,7 @@
 CÁC TASK TIẾP THEO KHI TỰ LÀM ELECTRO STORE:
 + Xây dựng phần admin gồm:
-	+ CRUD category
+	**** PAGINATE CHO NHUNG TRANG NAO LIST DATA DAI*****
+	+ CRUD category (chặn việc sửa danh mục cha, còn delete áp dụng ajax)
 	+ CRUD product
 	+ QLDH: Xem tất cả các đơn hàng đã đặt(phân loại theo thanh toán)
 	+ Xem thống kê theo ngày, tháng, năm
