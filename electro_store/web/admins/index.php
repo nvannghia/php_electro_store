@@ -38,13 +38,27 @@
                                 if ($process == 'add')
                                     require_once('partials/contents/categories/add.php');
                                 else if ($process == 'edit') {
-                                    if (!empty($_GET['cate_id'])) {
+                                    if (!empty($_GET['cate_id']) && is_numeric($_GET['cate_id'])) { // has id and id must be an integer value
                                         require_once('partials/contents/categories/edit.php');
                                     } else
                                         die('Bad Request');
                                 }
                             } else
-                                require('partials/contents/categories/index.php');
+                                require_once('partials/contents/categories/index.php');
+                            break;
+                        case 'product':
+                            $process = $_GET['process'] ?? '';
+                            if (!empty($process)) {
+                                if ($process == 'add')
+                                    require_once('partials/contents/products/add.php');
+                                else if ($process == 'edit') {
+                                    if (!empty($_GET['cate_id']) && is_numeric($_GET['cate_id'])) { // has id and id must be an integer value
+                                        require_once('partials/contents/categories/edit.php');
+                                    } else
+                                        die('Bad Request');
+                                }
+                            } else
+                                require_once('partials/contents/products/index.php');
                             break;
                     }
                     ?>

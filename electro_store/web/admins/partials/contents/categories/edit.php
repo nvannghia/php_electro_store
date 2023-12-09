@@ -6,6 +6,8 @@ $cate_id = $_GET['cate_id'] ?? '';
 if (!empty($cate_id)) {
     $query_cate_by_id = pg_query($conn, "SELECT * FROM category WHERE id = $cate_id");
     $category = pg_fetch_assoc($query_cate_by_id);
+    if ($category['parent_id'] == 0)
+        die("Can't edit category parent!");
 }
 
 // edit category
@@ -14,7 +16,7 @@ if (isset($_POST['edit_category'])) {
     $cate_name = $_POST['category_name'] ?? '';
     $cate_parent_id = $_POST['category_parent_id'] ?? '';
 
-    $validate_data = !empty($cate_name) && !empty($cate_parent_id);
+    $validate_data = !empty($cate_name) && is_numeric($cate_parent_id);
     if ($validate_data) {
         $query_update_cate = pg_query($conn, "UPDATE category 
                                                 SET name = '$cate_name', parent_id = $cate_parent_id 
@@ -41,6 +43,7 @@ if (isset($_POST['edit_category'])) {
     <div class="mb-3">
         <label for="exampleInputPassword1" class="form-label">Chọn danh mục cha</label><br>
         <select class="form-select" style="min-width: 50%; min-height: 35px;" name="category_parent_id">
+            <option value="0">Danh mục cha</option>
             <?php foreach ($cates_parent as $cate_p) : ?>
                 <option value="<?php echo $cate_p['id'] ?>" <?php echo $cate_p['id'] == $category['parent_id'] ? 'selected' : ''; ?>>
                     <?php echo $cate_p['name']; ?>

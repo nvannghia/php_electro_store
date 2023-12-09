@@ -13,8 +13,7 @@ $amount = 0;
 foreach ($_SESSION[$cart_user_id] as $prod) {
     $amount += $prod[2] * $prod[3];
 }
-// unset($_SESSION['ship_info' . $user_id]);
-// die();
+
 ?>
 <?php
 if ($user_id != '') { // if user logged

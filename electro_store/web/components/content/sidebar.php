@@ -99,7 +99,7 @@
             <div class="box-scroll">
                 <div class="scroll">
                     <?php
-                    $sql_hot_product = pg_query($conn, "select * from product where hot_product IS TRUE");
+                    $sql_hot_product = pg_query($conn, "select * from product ORDER BY id DESC LIMIT 4");
                     $hot_products = pg_fetch_all($sql_hot_product);
                     foreach ($hot_products as $hot_prod) :
                     ?>

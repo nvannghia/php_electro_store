@@ -1,7 +1,7 @@
 <?php
 session_start();
 include_once('../../../db/connect.php');
-require '../../../vendor/autoload.php'; //load cac load can thiet cho cloudinary
+require '../../../vendor/autoload.php'; //load cac class can thiet cho cloudinary
 require_once('../../../configs/cloudinary.php');
 require_once('../../../ceasar.php');
 

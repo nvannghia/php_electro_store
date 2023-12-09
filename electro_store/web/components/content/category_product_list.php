@@ -48,7 +48,7 @@ $products = pg_fetch_all($sql_products_by_cate_id);
                                 <div class="col-md-4 product-men">
                                     <div class="men-pro-item simpleCart_shelfItem">
                                         <div class="men-thumb-item text-center">
-                                            <img src="images/<?php echo $valueP['image'] ?>" alt="<?php $valueP['name'] ?>" width="200px" height="200px">
+                                            <img src="<?php echo $valueP['image'] ?>" alt="<?php $valueP['name'] ?>" width="200px" height="200px">
                                             <div class="men-cart-pro">
                                                 <div class="inner-men-cart-pro">
                                                     <a href="?manage=product_detail&product_id=<?php echo $valueP['id']; ?>" class="link-product-add-cart">Xem chi tiết </a>

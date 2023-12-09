@@ -146,13 +146,15 @@ $cart_user_id = 'cart' . $user_id;
                                             <textarea rows="5" id="note" placeholder="Ghi chú" name="note" style="width: 100%; resize: none;"></textarea>
                                         </div>
                                     </div>
-                                    <button type="submit" class="submit check_out btn" name="payment_method" value="momo_QRcode">Thanh
-                                        toán bằng
-                                        MoMo
-                                        QR code</button>
-                                    <button type="submit" class="submit check_out btn" name="payment_method" value="momo_transfer">Thanh
-                                        toán
-                                        bằng MoMo chuyển khoản</button>
+                                    <?php if (isset($_SESSION['user']['id'])) : ?>
+                                        <button type="submit" class="submit check_out btn" name="payment_method" value="momo_QRcode">Thanh
+                                            toán bằng
+                                            MoMo
+                                            QR code</button>
+                                        <button type="submit" class="submit check_out btn" name="payment_method" value="momo_transfer">Thanh
+                                            toán
+                                            bằng MoMo chuyển khoản</button>
+                                    <?php endif; ?>
                                     <button type="submit" class="submit check_out btn" name="payment_method" value="cash_on_delivery">Thanh toán
                                         khi nhận hàng</button>
                                 </div>
