@@ -33,9 +33,6 @@ if (isset($_POST['add_prod'])) {
         }
     }
 }
-
-
-
 ?>
 
 <a href="index.php?param=product" class="btn btn-info mb-2" style="font-size: 20px !important;">Về trang chủ sản phẩm</a>

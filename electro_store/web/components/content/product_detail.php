@@ -39,19 +39,9 @@ if (isset($_GET['product_id']) && $_GET['product_id'] != '') {
                         <ul class="slides">
                             <li data-thumb="images/<?php echo $product['image']; ?>">
                                 <div class="thumb-image">
-                                    <img src="images/<?php echo $product['image']; ?>" data-imagezoom="true" class="img-fluid" alt="">
+                                    <img src="<?php echo $product['image']; ?>" data-imagezoom="true" class="fill" alt="">
                                 </div>
                             </li>
-                            <!-- <li data-thumb="images/si2.jpg">
-                                <div class="thumb-image">
-                                    <img src="images/si2.jpg" data-imagezoom="true" class="img-fluid" alt="">
-                                </div>
-                            </li>
-                            <li data-thumb="images/si3.jpg">
-                                <div class="thumb-image">
-                                    <img src="images/si3.jpg" data-imagezoom="true" class="img-fluid" alt="">
-                                </div>
-                            </li> -->
                         </ul>
                         <div class="clearfix"></div>
                     </div>

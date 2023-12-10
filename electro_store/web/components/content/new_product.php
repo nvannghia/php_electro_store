@@ -37,10 +37,10 @@
                                         <div class="col-md-4 product-men mt-5">
                                             <div class="men-pro-item simpleCart_shelfItem">
                                                 <div class="men-thumb-item text-center">
-                                                    <img src="images/<?php echo $prod['image']; ?>" alt="" width="200px" height="200px" />
+                                                    <img src="<?php echo $prod['image']; ?>" alt="" width="100%" height="180px" />
                                                     <div class="men-cart-pro">
                                                         <div class="inner-men-cart-pro">
-                                                            <a href="?manage=product_detail&product_id=<?php echo $prod['id']; ?>" class="link-product-add-cart">
+                                                            <a href="?manage=product_detail&product_id=<?php echo $prod['id']; ?>" class="link-product-add-cart mb-20">
                                                                 Xem sản phẩm
                                                             </a>
                                                         </div>

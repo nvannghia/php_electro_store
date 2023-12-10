@@ -24,7 +24,7 @@
         <!-- //header -->
         <?php require_once('partials/header.html');  ?>
         <!-- //sidebar -->
-        <?php require_once('partials/sidebar.html'); ?>
+        <?php require_once('partials/sidebar.php'); ?>
         <!-- //main content -->
         <div class="main-panel">
             <div class="content">
@@ -52,8 +52,8 @@
                                 if ($process == 'add')
                                     require_once('partials/contents/products/add.php');
                                 else if ($process == 'edit') {
-                                    if (!empty($_GET['cate_id']) && is_numeric($_GET['cate_id'])) { // has id and id must be an integer value
-                                        require_once('partials/contents/categories/edit.php');
+                                    if (!empty($_GET['prod_id']) && is_numeric($_GET['prod_id'])) { // has id and id must be an integer value
+                                        require_once('partials/contents/products/edit.php');
                                     } else
                                         die('Bad Request');
                                 }
