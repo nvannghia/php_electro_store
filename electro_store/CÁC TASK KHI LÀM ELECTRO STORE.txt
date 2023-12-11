@@ -1,8 +1,8 @@
 CÁC TASK TIẾP THEO KHI TỰ LÀM ELECTRO STORE:
 + Xây dựng phần admin gồm:
-	+ QLDH: Xem tất cả các đơn hàng đã đặt(phân loại theo thanh toán)
 	+ Xem thống kê theo ngày, tháng, năm
-
+	
+	+ Điều hướng login.
 
 --> done các task trên quay ra phần customer để code tiếp các chức năng về bộ lọc dữ liệu...
 

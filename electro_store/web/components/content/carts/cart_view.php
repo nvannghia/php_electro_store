@@ -67,7 +67,7 @@ $cart_user_id = 'cart' . $user_id;
                                             <td class="invert"><?php echo ++$i; ?></td>
                                             <td class="invert-image">
                                                 <a href="single.html">
-                                                    <img src="images/<?php echo $product_value[1] ?>" alt=" " class="img-responsive" style="width: 120px;">
+                                                    <img src="<?php echo $product_value[1] ?>" alt=" " class="img-responsive" style="width: 120px;">
                                                 </a>
                                             </td>
                                             <td class="invert"><?php echo $product_value[0]; ?></td>

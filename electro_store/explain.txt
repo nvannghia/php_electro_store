@@ -26,6 +26,7 @@ content:
 ** Các task nâng cao đã làm được:
 + Tích hợp thanh toán MoMo.
 + Dùng cloudinary để lưu ảnh product và avatar của user.
++ Tự viết thuật toán mã hóa ceasar - 2 chiều (mã hóa - giải mã)
 + Thử dùng AWSS RDS để làm csdl Postgresql
 + Học và tìm hiểu về CSDL postgresql
 

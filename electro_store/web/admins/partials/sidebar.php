@@ -42,6 +42,9 @@
     //count products quantity
     $query_number_records_product = pg_query($conn, "SELECT * FROM product");
     $count_products = pg_num_rows($query_number_records_product);
+    ////count orderss quantity
+    $query_number_records_orders = pg_query($conn, "SELECT * FROM orders");
+    $count_orders = pg_num_rows($query_number_records_orders);
     ?>
     <ul class="nav">
       <li class="nav-item">
@@ -57,6 +60,14 @@
           <i class="fa-brands fa-product-hunt"></i>
           <p>Sản phẩm</p>
           <span class="badge badge-count"><?php echo $count_products; ?></span>
+        </a>
+      </li>
+
+      <li class="nav-item">
+        <a href="index.php?param=orders">
+          <i class="fa-brands fa-product-hunt"></i>
+          <p>Quản lý đơn hàng</p>
+          <span class="badge badge-count"><?php echo $count_orders; ?></span>
         </a>
       </li>
     </ul>
