@@ -70,6 +70,14 @@
           <span class="badge badge-count"><?php echo $count_orders; ?></span>
         </a>
       </li>
+
+      <li class="nav-item">
+        <a href="index.php?param=statistical">
+          <i class="fa-brands fa-product-hunt"></i>
+          <p>Thống kê</p>
+
+        </a>
+      </li>
     </ul>
   </div>
 </div>

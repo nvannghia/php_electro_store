@@ -10,6 +10,8 @@
     <link rel="stylesheet" href="assets/css/ready.css">
     <link rel="stylesheet" href="assets/css/demo.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+
 </head>
 
 <body>
@@ -69,6 +71,9 @@
                                     die('Bad Request');
                             } else
                                 require_once('partials/contents/orders/orders.php');
+                            break;
+                        case 'statistical':
+                            require_once('partials/contents/statisticals/statistical.php');
                             break;
                     }
                     ?>
