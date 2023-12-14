@@ -48,7 +48,7 @@
                                                 </div>
                                                 <div class="item-info-product text-center border-top mt-4">
                                                     <h4 class="pt-1">
-                                                        <a href="?manage=product_detail&prod_id=<?php echo $prod['id']; ?>">
+                                                        <a href="?manage=product_detail&product_id=<?php echo $prod['id']; ?>">
                                                             <?php echo $prod['name']; ?>
                                                         </a>
                                                     </h4>

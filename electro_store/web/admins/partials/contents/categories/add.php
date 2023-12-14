@@ -18,7 +18,7 @@ if (isset($_POST['add_category'])) {
         echo "<p class='text-danger h4'>Vui lòng nhập đầy đủ thông tin các trường dữ liệu!</p>";
 }
 ?>
-<a href="index.php?param=category" class="btn btn-info mb-2">Về trang chủ danh mục</a>
+<a href="index.php?param=category&page=1" class="btn btn-info mb-2">Về trang chủ danh mục</a>
 <form action="<?php echo $_SERVER['PHP_SELF'] . '?param=category&process=add'; ?>" method="post">
     <div class="mb-3">
         <label for="category_name" class="form-label">Tên danh mục</label>

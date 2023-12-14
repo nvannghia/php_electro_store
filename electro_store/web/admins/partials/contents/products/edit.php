@@ -53,7 +53,7 @@ if (isset($_POST['edit_prod'])) {
 }
 ?>
 
-<a href="index.php?param=product" class="btn btn-info mb-2" style="font-size: 20px !important;">Về trang chủ sản phẩm</a>
+<a href="index.php?param=product&page=1" class="btn btn-info mb-2" style="font-size: 20px !important;">Về trang chủ sản phẩm</a>
 <form action="<?php echo $_SERVER['PHP_SELF'] . "?param=product&process=edit&prod_id=$prod_id"; ?>" method="post" enctype="multipart/form-data">
     <div class="mb-3">
         <label for="category_name" class="form-label" style="font-size: 20px !important;">Tên sản phẩm</label>

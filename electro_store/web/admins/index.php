@@ -15,6 +15,18 @@
 </head>
 
 <body>
+    <?php
+    session_start();
+    if (!empty($_SESSION['user'])) {
+        if ($_SESSION['user']['role'] == 'CUSTOMER') {
+            echo '403, Forbidden';
+            die;
+        }
+    } else {
+        header('Location: ../components/log_in_out/login/login.php');
+    }
+
+    ?>
     <!-- //get connection -->
     <?php
     require_once('../db/connect.php');
@@ -24,7 +36,7 @@
     ?>
     <div class="wrapper">
         <!-- //header -->
-        <?php require_once('partials/header.html');  ?>
+        <?php require_once('partials/header.php');  ?>
         <!-- //sidebar -->
         <?php require_once('partials/sidebar.php'); ?>
         <!-- //main content -->
@@ -74,6 +86,9 @@
                             break;
                         case 'statistical':
                             require_once('partials/contents/statisticals/statistical.php');
+                            break;
+                        default:
+                            echo '<img src="https://res.cloudinary.com/dnwemzbtm/image/upload/v1702542377/welcome_back_wpsntd.png" alt="welcome back" width="100%" height="650px">';
                             break;
                     }
                     ?>

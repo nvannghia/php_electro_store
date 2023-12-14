@@ -2,10 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a747bafa-6b4d-4c17-b42a-f3754a14db83" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/electro_store/CÁC TASK KHI LÀM ELECTRO STORE.txt" beforeDir="false" afterPath="$PROJECT_DIR$/electro_store/CÁC TASK KHI LÀM ELECTRO STORE.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/electro_store/explain.txt" beforeDir="false" afterPath="$PROJECT_DIR$/electro_store/explain.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/electro_store/web/payment/process_payment.php" beforeDir="false" afterPath="$PROJECT_DIR$/electro_store/web/payment/process_payment.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/electro_store/web/z.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/electro_store/web/admins/partials/contents/categories/add.php" beforeDir="false" afterPath="$PROJECT_DIR$/electro_store/web/admins/partials/contents/categories/add.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/electro_store/web/admins/partials/contents/categories/edit.php" beforeDir="false" afterPath="$PROJECT_DIR$/electro_store/web/admins/partials/contents/categories/edit.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/electro_store/web/admins/partials/contents/products/add.php" beforeDir="false" afterPath="$PROJECT_DIR$/electro_store/web/admins/partials/contents/products/add.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/electro_store/web/admins/partials/contents/products/edit.php" beforeDir="false" afterPath="$PROJECT_DIR$/electro_store/web/admins/partials/contents/products/edit.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/electro_store/web/admins/partials/contents/statisticals/statistical.php" beforeDir="false" afterPath="$PROJECT_DIR$/electro_store/web/admins/partials/contents/statisticals/statistical.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -19,23 +20,23 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="PhpWorkspaceProjectConfiguration" interpreter_name="D:\xampp\php\php.exe" />
-  <component name="ProjectColorInfo"><![CDATA[{
-  "associatedIndex": 4
-}]]></component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 4
+}</component>
   <component name="ProjectId" id="2ZCZZfMI9kAOCEhv0lP8zkWiUkb" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "git-widget-placeholder": "main",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -45,6 +46,7 @@
       <option name="presentableId" value="Default" />
       <updated>1701928080979</updated>
       <workItem from="1701928083125" duration="45000" />
+      <workItem from="1702396362160" duration="4000" />
     </task>
     <servers />
   </component>

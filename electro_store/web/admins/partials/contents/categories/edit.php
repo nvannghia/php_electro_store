@@ -34,7 +34,7 @@ if (isset($_POST['edit_category'])) {
 }
 ?>
 
-<a href="index.php?param=category" class="btn btn-info mb-2">Về trang chủ danh mục</a>
+<a href="index.php?param=category&page=1" class="btn btn-info mb-2">Về trang chủ danh mục</a>
 <form action="<?php echo $_SERVER['PHP_SELF'] . "?param=category&process=edit&cate_id=$cate_id"; ?>" method="post">
     <div class="mb-3">
         <label for="category_name" class="form-label">Tên danh mục</label>

@@ -7,12 +7,13 @@ require_once('../../../ceasar.php');
 
 use Cloudinary\Api\Upload\UploadApi;
 
+
 $conn = connect_db();
 if ($conn == null)
     die("Connection failed!");
 
 // if user logged
-if (!empty($_SESSION['user'])) {
+if (!empty($_SESSION['user']) && $_SESSION['user']['role'] == 'CUSTOMER') {
     header('Location: ../../../index.php');
 }
 
@@ -57,8 +58,14 @@ if (isset($_POST['submit']) && $_POST['submit'] == 'Đăng nhập') {
         $user_data = pg_fetch_assoc($login); // return false if query is wrong.
         if ($user_data != false) {
             $_SESSION['user'] = $user_data;
-            header('Location: ../../../index.php');
-            exit;
+            if ($_SESSION['user']['role'] == 'CUSTOMER')
+                header('Location: ../../../index.php');
+            if ($_SESSION['user']['role'] == 'ADMIN') {
+                header('Location: ../../../admins/index.php');
+                exit();
+            }
+        } else {
+            header('Location: ' . $_SERVER['PHP_SELF'] . '?error_msg');
         }
     }
     header('Location: ' . $_SERVER['PHP_SELF'] . '?error_msg');

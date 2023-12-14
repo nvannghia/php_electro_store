@@ -14,28 +14,35 @@ if (isset($_POST['add_prod'])) {
     $desc = $_POST['prod_desc'] ?? '';
     $category_id = $_POST['category_id'] ?? '';
     // check image to upload to cloudinary
-    if (file_exists($_FILES['prod_image']['tmp_name']))
+    if (file_exists($_FILES['prod_image']['tmp_name'])) {
+
+
         $response = (new UploadApi())->upload($_FILES['prod_image']['tmp_name'], array('folder' => 'electro_store/product'));
-    if ($response['secure_url'] != '') {
-        $url_img = $response['secure_url'];
-        $res = pg_insert($conn, 'product', array(
-            'name' => $name,
-            'price' => $price,
-            'promotion_price' => $price_promotion,
-            'description' => $desc,
-            'image' => $url_img,
-            'category_id' => $category_id
-        ));
-        if ($res != false) {
-            echo "<p class='text-success h4'>Thêm sản phẩm thành công!</p>";
+        if ($response['secure_url'] != '') {
+            $url_img = $response['secure_url'];
+            $res = pg_insert($conn, 'product', array(
+                'name' => $name,
+                'price' => $price,
+                'promotion_price' => $price_promotion,
+                'description' => $desc,
+                'image' => $url_img,
+                'category_id' => $category_id
+            ));
+            if ($res != false) {
+                echo "<p class='text-success h4'>Thêm sản phẩm thành công!</p>";
+            } else {
+                echo "<p class='text-danger h4'>Thêm sản phẩm thất bại!</p>";
+            }
         } else {
             echo "<p class='text-danger h4'>Thêm sản phẩm thất bại!</p>";
         }
+    } else {
+        echo "<p class='text-danger h4'>Vui lòng điền đầy đủ các thông tin!</p>";
     }
 }
 ?>
 
-<a href="index.php?param=product" class="btn btn-info mb-2" style="font-size: 20px !important;">Về trang chủ sản phẩm</a>
+<a href="index.php?param=product&page=1" class="btn btn-info mb-2" style="font-size: 20px !important;">Về trang chủ sản phẩm</a>
 <form action="<?php echo $_SERVER['PHP_SELF'] . '?param=product&process=add'; ?>" method="post" enctype="multipart/form-data">
     <div class="mb-3">
         <label for="category_name" class="form-label" style="font-size: 20px !important;">Tên sản phẩm</label>

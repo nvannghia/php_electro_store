@@ -92,25 +92,26 @@
                     </ul>
                 </li>
                 <li class="nav-item dropdown">
-                    <a class="dropdown-toggle profile-pic" data-toggle="dropdown" href="#" aria-expanded="false"> <img src="assets/img/author.jpg" alt="user-img" width="36" class="img-circle"><span>Hizrian</span></span> </a>
+                    <a class="dropdown-toggle profile-pic" data-toggle="dropdown" href="#" aria-expanded="false"> <img src="assets/img/author.jpg" alt="user-img" width="36" class="img-circle"><span><?php echo $_SESSION['user']['display_name']; ?></span></span> </a>
                     <ul class="dropdown-menu dropdown-user">
-                        <li>
-                            <div class="user-box">
-                                <div class="u-img"><img src="assets/img/author.jpg" alt="user"></div>
-                                <div class="u-text">
-                                    <h4>Hizrian</h4>
-                                    <p class="text-muted">hello@themekita.com</p><a href="profile.html" class="btn btn-rounded btn-danger btn-sm">View Profile</a>
+                        <?php
+                        if (!empty($_SESSION['user'])) : ?>
+                            <li>
+                                <div class="user-box">
+                                    <div class="u-img"><img src="assets/img/author.jpg" alt="user"></div>
+                                    <div class="u-text">
+                                        <h4><?php echo $_SESSION['user']['display_name']; ?></h4>
+                                        <p class="text-muted"><?php echo $_SESSION['user']['email']; ?></p><a href="profile.html" class="btn btn-rounded btn-danger btn-sm">View Profile</a>
+                                    </div>
                                 </div>
-                            </div>
-                        </li>
-                        <div class="dropdown-divider"></div>
-                        <a class="dropdown-item" href="#"><i class="ti-user"></i> My Profile</a>
-                        <a class="dropdown-item" href="#"></i> My Balance</a>
-                        <a class="dropdown-item" href="#"><i class="ti-email"></i> Inbox</a>
-                        <div class="dropdown-divider"></div>
-                        <a class="dropdown-item" href="#"><i class="ti-settings"></i> Account Setting</a>
-                        <div class="dropdown-divider"></div>
-                        <a class="dropdown-item" href="#"><i class="fa fa-power-off"></i> Logout</a>
+                            </li>
+                            <div class="dropdown-divider"></div>
+                            <a class="dropdown-item" href="../components/log_in_out/logout.php"><i class="fa fa-power-off"></i> Logout</a>
+                        <?php
+                        else :
+                            echo '<a class="dropdown-item" href="#"><i class="fa fa-power-off"></i> Login</a>';
+                        endif;
+                        ?>
                     </ul>
                     <!-- /.dropdown-user -->
                 </li>

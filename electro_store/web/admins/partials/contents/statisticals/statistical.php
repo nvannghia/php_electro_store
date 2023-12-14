@@ -4,7 +4,11 @@ if (isset($_POST['submit_statistical']) && !empty($_POST['follow_by'])) {
     $follow_by = $_POST['follow_by'];
     $sql_statistical = '';
     if ($follow_by == 'day') {
-        $sql_statistical = pg_query($conn, "SELECT to_char(created_at, 'DD-MM-YYYY') AS value, SUM(amount) AS total FROM orders GROUP BY value");
+        $sql_statistical = pg_query($conn, "SELECT 
+                                            to_char(created_at, 'DD-MM-YYYY') AS value, 
+                                            SUM(amount) AS total 
+                                            FROM orders 
+                                            GROUP BY value");
     } else if ($follow_by == 'month') {
         $sql_statistical = pg_query($conn, "SELECT 
                                             EXTRACT(MONTH FROM created_at) || '-' || EXTRACT(YEAR FROM created_at) AS value,
@@ -53,26 +57,28 @@ if (isset($_POST['submit_statistical']) && !empty($_POST['follow_by'])) {
 <?php
 if (isset($follow_by)) :
 ?>
-    <table class="table table-light">
-        <thead class="table-info">
-            <tr>
-                <?php if ($follow_by == 'day') : ?>
-                    <th scope="col" style="font-size: 20px;">Ngày đặt hàng</th>
-                <?php elseif ($follow_by == 'month') : ?>
-                    <th scope="col" style="font-size: 20px;">Tháng đặt hàng</th>
-                <?php else : ?>
-                    <th scope="col" style="font-size: 20px;">Năm đặt hàng</th>
-                <?php endif; ?>
-                <th scope="col" style="font-size: 20px;">Doanh thu</th>
-            </tr>
-        </thead>
-        <tbody>
-            <?php foreach ($data as $item) : ?>
+    <div class="d-flex justify-content-center">
+        <table class="table table-light" style="width: 70%;">
+            <thead class="table-info">
                 <tr>
-                    <th scope="row" style="font-size: 15px;"> <?php echo $item['value']; ?></th>
-                    <td style="font-size: 15px;"><?php echo  number_format($item['total']); ?><i class="fa-solid fa-dong-sign"></i></td>
+                    <?php if ($follow_by == 'day') : ?>
+                        <th scope="col" style="font-size: 20px;">Ngày đặt hàng</th>
+                    <?php elseif ($follow_by == 'month') : ?>
+                        <th scope="col" style="font-size: 20px;">Tháng đặt hàng</th>
+                    <?php else : ?>
+                        <th scope="col" style="font-size: 20px;">Năm đặt hàng</th>
+                    <?php endif; ?>
+                    <th scope="col" style="font-size: 20px;">Doanh thu</th>
                 </tr>
-            <?php endforeach; ?>
-        </tbody>
-    </table>
+            </thead>
+            <tbody>
+                <?php foreach ($data as $item) : ?>
+                    <tr>
+                        <th scope="row" style="font-size: 15px;"> <?php echo $item['value']; ?></th>
+                        <td style="font-size: 15px;"><?php echo  number_format($item['total']); ?><i class="fa-solid fa-dong-sign"></i></td>
+                    </tr>
+                <?php endforeach; ?>
+            </tbody>
+        </table>
+    </div>
 <?php endif; ?>

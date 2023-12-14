@@ -4,11 +4,13 @@ include_once('db/connect.php');
 $conn = connect_db();
 if ($conn == null)
     die();
+
 ?>
 <!DOCTYPE html>
 <html lang="zxx">
 
 <head>
+
     <title> Electro Store | Web</title>
     <!-- Meta tag Keywords -->
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -63,11 +65,11 @@ if ($conn == null)
     <?php include_once('components/header/navbar.php')    ?>
     <?php include_once('components/header/slider.html') ?>
     <?php
+    if (!empty($_GET['kw'])) {
+        include_once('components/content/search.php');
+    }
     $manage = $_GET['manage'] ?? '';
     switch ($manage) {
-        case '':
-            include_once('components/content/new_product.php');
-            break;
         case 'category':
             include_once('components/content/category_product_list.php');
             break;
@@ -76,6 +78,9 @@ if ($conn == null)
             break;
         case 'cart':
             include_once('components/content/carts/cart_view.php');
+            break;
+        default:
+            include_once('components/content/new_product.php');
             break;
     }
     ?>
