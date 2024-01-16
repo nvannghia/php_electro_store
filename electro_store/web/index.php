@@ -58,7 +58,15 @@ if ($conn == null)
 </head>
 
 <body>
+    <?php
+    if (!empty($_SESSION['user'])) {
+        if ($_SESSION['user']['role'] == 'ADMIN') {
+            echo '403, Forbidden';
+            die;
+        }
+    }
 
+    ?>
 
     <?php include_once('components/header/header_top.php') ?>
     <?php include_once('components/header/header_bottom.html') ?>

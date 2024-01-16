@@ -88,7 +88,7 @@
                             require_once('partials/contents/statisticals/statistical.php');
                             break;
                         default:
-                            echo '<img src="https://res.cloudinary.com/dnwemzbtm/image/upload/v1702542377/welcome_back_wpsntd.png" alt="welcome back" width="100%" height="650px">';
+                            echo '<img src="https://res.cloudinary.com/dnwemzbtm/image/upload/v1702542377/welcome_back_wpsntd.png" alt="welcome back" width="100%"  style="height:100vh" >';
                             break;
                     }
                     ?>
