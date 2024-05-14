@@ -49,7 +49,7 @@
     <ul class="nav">
       <li class="nav-item">
         <a href="index.php?param=category&page=1">
-          <i class="la la-table"></i>
+          <i class="fa-solid fa-list"></i>
           <p>Danh mục</p>
           <span class="badge badge-count"><?php echo $count_categories; ?></span>
         </a>
@@ -65,7 +65,7 @@
 
       <li class="nav-item">
         <a href="index.php?param=orders">
-          <i class="fa-brands fa-product-hunt"></i>
+          <i class="fa-solid fa-list-check"></i>
           <p>Quản lý đơn hàng</p>
           <span class="badge badge-count"><?php echo $count_orders; ?></span>
         </a>
@@ -73,7 +73,7 @@
 
       <li class="nav-item">
         <a href="index.php?param=statistical">
-          <i class="fa-brands fa-product-hunt"></i>
+          <i class="fa-solid fa-chart-simple"></i>
           <p>Thống kê</p>
 
         </a>

@@ -12,6 +12,8 @@ $conn = connect_db();
 if ($conn == null)
     die("Connection failed!");
 
+
+
 // if user logged
 if (!empty($_SESSION['user']) && $_SESSION['user']['role'] == 'CUSTOMER') {
     header('Location: ../../../index.php');
