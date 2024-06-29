@@ -2,7 +2,6 @@
 $user_id = $_SESSION['user']['id'] ?? '';
 $cart_user_id = 'cart' . $user_id;
 
-
 ?>
 
 <?php

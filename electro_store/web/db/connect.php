@@ -5,7 +5,7 @@ function connect_db()
     define("HOSTNAME", "localhost"); // Endpoint of local
     define("DB", "electro");
     define("USERNAME", "postgres");
-    define("PASSWORD", "123456789");
+    define("PASSWORD", "123456");
     $connection_string = "host=" . HOSTNAME . " dbname=" . DB . " user=" . USERNAME . " password=" . PASSWORD . " ";
     $connection = pg_pconnect($connection_string);
     if (!$connection) {
